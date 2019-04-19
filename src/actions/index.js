@@ -2,31 +2,50 @@ import * as types from './../constants/actionTypes';
 
 export const listAll = () =>{
     return {
-        types: types.LIST_ALL,
+        type: types.LIST_ALL,
     }
 };
 
 export const addTask = (task) =>{
     return {
-        types: types.ADD_TASK,
+        type: types.ADD_TASK,
         task // task: task
     }
 }
 export const toggleForm = ()=>{
     return {
-        types: types.TOGGLE_FORM
+        type: types.TOGGLE_FORM
 
     }
 }
 export const openForm = ()=>{
     return {
-        types: types.OPEN_FORM
+        type: types.OPEN_FORM
         
     }
 }
 export const closeForm = ()=>{
     return {
-        types: types.CLOSE_FORM
+        type: types.CLOSE_FORM
         
+    }
+}
+export const updateStatus = (id) =>{
+    return {
+        type: types.UPDATE_STATUS_TASK,
+        id // id : id
+    }
+}
+
+export const deleteTask = (id) => {
+    return {
+        type : types.DELETE_TASK,
+        id
+    }
+}
+export const editTask = (task) => {
+    return {
+        type : types.EDIT_TASK,
+        task
     }
 }
